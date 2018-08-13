@@ -41,7 +41,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
   gem 'rspec-rails', '~> 3.7'
-  gem 'factory_bot', '~> 4.10'
+  gem 'factory_bot'
   gem 'shoulda', '~> 3.6'
   gem 'shoulda-matchers', '~> 3.1', '>= 3.1.2'
 end
