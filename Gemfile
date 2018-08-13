@@ -49,8 +49,8 @@ group :development, :test do
 
   gem 'rspec-rails', '~> 3.7'
   gem 'factory_bot'
-  gem 'shoulda', '~> 3.6'
-  gem 'shoulda-matchers', '~> 3.1', '>= 3.1.2'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'better_errors', '~> 2.4'
 end
 
 group :development do

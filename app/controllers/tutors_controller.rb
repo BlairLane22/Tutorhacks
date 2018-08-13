@@ -1,5 +1,6 @@
 class TutorsController < ApplicationController
   before_action :set_tutor, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /tutors
   # GET /tutors.json
@@ -14,7 +15,7 @@ class TutorsController < ApplicationController
 
   # GET /tutors/new
   def new
-    @tutor = Tutor.new
+    @tutor = current_user.build_tutor
   end
 
   # GET /tutors/1/edit
@@ -24,7 +25,7 @@ class TutorsController < ApplicationController
   # POST /tutors
   # POST /tutors.json
   def create
-    @tutor = Tutor.new(tutor_params)
+    @tutor = current_user.build_tutor(tutor_params)
 
     respond_to do |format|
       if @tutor.save
