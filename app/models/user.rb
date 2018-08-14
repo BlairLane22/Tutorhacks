@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :tutor
+  has_one :student
 
 
   Rank = ['Tutor', 'Student']
