@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_one :tutor
   has_one :student
 
+  validates :name, presence: true
 
   Rank = ['Tutor', 'Student']
 end
