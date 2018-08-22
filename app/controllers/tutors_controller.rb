@@ -11,6 +11,9 @@ class TutorsController < ApplicationController
   # GET /tutors/1
   # GET /tutors/1.json
   def show
+    if user_signed_in? && current_user.id != @tutor.user_id
+      @tutor.punch(request)
+    end
   end
 
   # GET /tutors/new
@@ -29,7 +32,7 @@ class TutorsController < ApplicationController
 
     respond_to do |format|
       if @tutor.save
-        format.html { redirect_to @tutor, notice: 'Tutor was successfully created.' }
+        format.html { redirect_to @tutor, notice: "#{@tutor.name} was successfully created." }
         format.json { render :show, status: :created, location: @tutor }
       else
         format.html { render :new }
@@ -43,7 +46,7 @@ class TutorsController < ApplicationController
   def update
     respond_to do |format|
       if @tutor.update(tutor_params)
-        format.html { redirect_to @tutor, notice: 'Tutor was successfully updated.' }
+        format.html { redirect_to @tutor, notice: "#{@tutor.name} was successfully updated." }
         format.json { render :show, status: :ok, location: @tutor }
       else
         format.html { render :edit }
@@ -57,7 +60,7 @@ class TutorsController < ApplicationController
   def destroy
     @tutor.destroy
     respond_to do |format|
-      format.html { redirect_to tutors_url, notice: 'Tutor was successfully destroyed.' }
+      format.html { redirect_to tutors_url, notice: "#{@tutor.name} was successfully destroyed." }
       format.json { head :no_content }
     end
   end
