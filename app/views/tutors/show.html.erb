@@ -2,7 +2,7 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @tutor.name %>
+  <%= @tutor.user.name %>
 </p>
 
 <p>
@@ -19,6 +19,10 @@
   <strong>Age:</strong>
   <%= @tutor.age %>
 </p>
+
+<% time = Time.parse(@tutor.created_at.to_s) %>
+<p class="has-text-gray has-text-centered mb2 f6">Created: <%= time_ago_in_words(time) %> ago </p>
+<p class="has-text-gray has-text-centered fg mb1 f7">Viewed: <%= @tutor.hits %> <%= @tutor.hits == 1 ? "time" : "times" %></p>
 
 <%= link_to 'Edit', edit_tutor_path(@tutor) %> |
 <%= link_to 'Back', tutors_path %>

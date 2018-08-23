@@ -9,5 +9,6 @@ class User < ApplicationRecord
 
   validates :name, presence: true
 
-  Rank = ['Tutor', 'Student']
+
+  Rank = ['Tutor ($19.99)', "Tutor"], ['Student (Free)', "Student"]
 end

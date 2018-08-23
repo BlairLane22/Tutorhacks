@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
   resources :students
-  root to: 'home#index'
+
+  authenticated :user, lambda {|u| u.rank == "Student"} do
+    root to: "students#index"
+  end
+
+  authenticated :user, lambda {|u| u.rank == "Tutor"} do
+    root to: "tutors#index"
+  end
+
+  unauthenticated :user do
+    root "home#index"
+  end
 
   devise_for :users, controllers: {
     registrations: 'registrations'

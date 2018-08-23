@@ -5,7 +5,7 @@ class TutorsController < ApplicationController
   # GET /tutors
   # GET /tutors.json
   def index
-    @tutors = Tutor.all
+    @tutor = Tutor.find(current_user.id)
   end
 
   # GET /tutors/1
@@ -32,7 +32,7 @@ class TutorsController < ApplicationController
 
     respond_to do |format|
       if @tutor.save
-        format.html { redirect_to @tutor, notice: "#{@tutor.name} was successfully created." }
+        format.html { redirect_to @tutor, notice: "#{@tutor.user.name} was successfully created." }
         format.json { render :show, status: :created, location: @tutor }
       else
         format.html { render :new }
@@ -46,7 +46,7 @@ class TutorsController < ApplicationController
   def update
     respond_to do |format|
       if @tutor.update(tutor_params)
-        format.html { redirect_to @tutor, notice: "#{@tutor.name} was successfully updated." }
+        format.html { redirect_to @tutor, notice: "#{@tutor.user.name} was successfully updated." }
         format.json { render :show, status: :ok, location: @tutor }
       else
         format.html { render :edit }
@@ -60,7 +60,7 @@ class TutorsController < ApplicationController
   def destroy
     @tutor.destroy
     respond_to do |format|
-      format.html { redirect_to tutors_url, notice: "#{@tutor.name} was successfully destroyed." }
+      format.html { redirect_to tutors_url, notice: "#{@tutor.user.name} was successfully destroyed." }
       format.json { head :no_content }
     end
   end
@@ -73,6 +73,6 @@ class TutorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tutor_params
-      params.require(:tutor).permit(:name, :description, :price, :age, :avatar)
+      params.require(:tutor).permit(:description, :price, :age, :avatar)
     end
 end
