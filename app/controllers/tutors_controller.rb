@@ -34,6 +34,11 @@ class TutorsController < ApplicationController
       if @tutor.save
         format.html { redirect_to @tutor, notice: "#{@tutor.user.name} was successfully created." }
         format.json { render :show, status: :created, location: @tutor }
+
+        if @tutor.gender == ""
+          puts "Gender in nil"
+          params[:gender] = "Other"
+        end
       else
         format.html { render :new }
         format.json { render json: @tutor.errors, status: :unprocessable_entity }
@@ -73,6 +78,6 @@ class TutorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tutor_params
-      params.require(:tutor).permit(:description, :price, :age, :avatar)
+      params.require(:tutor).permit(:description, :price, :age, :avatar, :gender)
     end
 end

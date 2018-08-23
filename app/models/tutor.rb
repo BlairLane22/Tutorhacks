@@ -7,4 +7,6 @@ class Tutor < ApplicationRecord
 
   validates :description, :price, :age, presence: true
   validates_numericality_of :price, :age
+
+  Gender = ["Male", "Female", "Other"]
 end
