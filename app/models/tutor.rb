@@ -3,9 +3,9 @@ class Tutor < ApplicationRecord
 
   acts_as_punchable
 
-  belongs_to :user, optional: true, dependent: :destroy
+  belongs_to :user, optional: true
 
-  validates :description, :price, :age, presence: true
+  validates :description, :price, :age, :gender, presence: true
   validates_numericality_of :price, :age
 
   Gender = ["Male", "Female", "Other"]

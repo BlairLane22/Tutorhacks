@@ -13,14 +13,18 @@
   </thead>
 
   <tbody>
-      <td><%= @tutor.user.name %></td>
-      <td><%= @tutor.description %></td>
-      <td><%= @tutor.price %></td>
-      <td><%= @tutor.age %></td>
-      <td><%= @tutor.gender %></td>
-      <td><%= link_to 'Show', @tutor %></td>
-      <td><%= link_to 'Edit', edit_tutor_path(@tutor) %></td>
-      <td><%= link_to 'Destroy', @tutor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% @tutor.each do |tutor| %>
+      <% if current_user.id == tutor.user_id %>
+        <td><%= tutor.user.name %></td>
+        <td><%= tutor.description %></td>
+        <td><%= tutor.price %></td>
+        <td><%= tutor.age %></td>
+        <td><%= tutor.gender %></td>
+        <td><%= link_to 'Show', tutor %></td>
+        <td><%= link_to 'Edit', edit_tutor_path(tutor) %></td>
+        <td><%= link_to 'Destroy', tutor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    <% end %>
     </tr>
   </tbody>
 </table>

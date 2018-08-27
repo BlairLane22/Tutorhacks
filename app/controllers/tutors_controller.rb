@@ -5,7 +5,7 @@ class TutorsController < ApplicationController
   # GET /tutors
   # GET /tutors.json
   def index
-    @tutor = Tutor.find(current_user.id)
+    @tutor = Tutor.all
   end
 
   # GET /tutors/1

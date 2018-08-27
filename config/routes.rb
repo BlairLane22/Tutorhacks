@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :students
 
   authenticated :user, lambda {|u| u.rank == "Student"} do
     root to: "students#index"
@@ -18,6 +17,12 @@ Rails.application.routes.draw do
   }
 
   resources :tutors
+  resources :students
+  
+  # resources :user do
+  #   resources :tutors
+  #   resources :students
+  # end
 
 
   get 'home/index'
