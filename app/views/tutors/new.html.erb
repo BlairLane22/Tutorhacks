@@ -1,5 +1,15 @@
-<h1><%= current_user.name %></h1>
+<% content_for :header do %>
+<section class="hero is-warning">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Create a Profile
+      </h1>
+    </div>
+  </div>
+</section>
+<% end %>
 
-<%= render 'form', tutor: @tutor %>
-
-<%= link_to 'Back', tutors_path %>
+<div class="pv4">
+  <%= render 'form', tutor: @tutor %>
+</div>

@@ -11,4 +11,5 @@ class User < ApplicationRecord
 
 
   Rank = ['Tutor ($19.99)', "Tutor"], ['Student (Free)', "Student"]   # ['Whats shown on screen', "Value saved to database"]
+  
 end

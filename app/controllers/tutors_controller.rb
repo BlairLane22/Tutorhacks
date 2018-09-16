@@ -11,7 +11,7 @@ class TutorsController < ApplicationController
   # GET /tutors/1
   # GET /tutors/1.json
   def show
-    if user_signed_in? && current_user.id != @tutor.user_id
+    if current_user.id != @tutor.user_id || current_user.rank == "Student"
       @tutor.punch(request)
     end
   end
@@ -34,11 +34,6 @@ class TutorsController < ApplicationController
       if @tutor.save
         format.html { redirect_to @tutor, notice: "#{@tutor.user.name} was successfully created." }
         format.json { render :show, status: :created, location: @tutor }
-
-        if @tutor.gender == ""
-          puts "Gender in nil"
-          params[:gender] = "Other"
-        end
       else
         format.html { render :new }
         format.json { render json: @tutor.errors, status: :unprocessable_entity }
@@ -78,6 +73,6 @@ class TutorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tutor_params
-      params.require(:tutor).permit(:description, :price, :age, :avatar, :gender)
+      params.require(:tutor).permit(:description, :price, :age, :avatar, :gender, :subjects)
     end
 end
