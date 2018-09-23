@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_29_195013) do
+ActiveRecord::Schema.define(version: 2018_09_23_195345) do
 
   create_table "punches", force: :cascade do |t|
     t.integer "punchable_id", null: false
@@ -25,17 +25,16 @@ ActiveRecord::Schema.define(version: 2018_08_29_195013) do
 
   create_table "students", force: :cascade do |t|
     t.text "description"
-    t.integer "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "grade"
+    t.string "parent_email", default: ""
   end
 
   create_table "tutors", force: :cascade do |t|
     t.text "description"
     t.decimal "price"
-    t.integer "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
@@ -60,6 +59,7 @@ ActiveRecord::Schema.define(version: 2018_08_29_195013) do
     t.string "rank"
     t.string "name"
     t.boolean "active", default: false
+    t.integer "age"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

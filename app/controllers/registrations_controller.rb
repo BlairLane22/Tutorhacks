@@ -11,11 +11,11 @@ class RegistrationsController < Devise::RegistrationsController
   private
 
   def sign_up_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :rank)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :rank, :age)
   end
 
   def account_update_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :current_password)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :current_password, :age)
   end
 
 end

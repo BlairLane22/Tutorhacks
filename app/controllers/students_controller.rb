@@ -16,6 +16,11 @@ class StudentsController < ApplicationController
   # GET /students/new
   def new
     @student = current_user.build_student
+    @under_age = false
+
+    if @student.user.age < 18
+      @under_age = true
+    end
   end
 
   # GET /students/1/edit
@@ -62,6 +67,9 @@ class StudentsController < ApplicationController
     end
   end
 
+  def parent
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_student
@@ -70,6 +78,6 @@ class StudentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_params
-      params.require(:student).permit(:description, :age)
+      params.require(:student).permit(:description, :parent_email, :grade)
     end
 end

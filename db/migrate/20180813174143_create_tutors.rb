@@ -3,7 +3,6 @@ class CreateTutors < ActiveRecord::Migration[5.2]
     create_table :tutors do |t|
       t.text :description
       t.decimal :price
-      t.integer :age
 
       t.timestamps
     end

@@ -11,5 +11,12 @@ class User < ApplicationRecord
 
 
   Rank = ['Tutor ($19.99)', "Tutor"], ['Student (Free)', "Student"]   # ['Whats shown on screen', "Value saved to database"]
-  
+
+  user_age = []
+  for i in 1..100
+    user_age << i
+  end
+
+  Age = user_age
+
 end

@@ -5,7 +5,6 @@
     <tr>
       <th>Name</th>
       <th>Description</th>
-      <th>Age</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,7 +15,6 @@
       <% if current_user.id == student.user_id %>
         <td><%= student.user.name %></td>
         <td><%= student.description %></td>
-        <td><%= student.age %></td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -18,13 +18,14 @@ Rails.application.routes.draw do
 
   resources :tutors
   resources :students
-  
-  # resources :user do
+
+  # resources :users do
   #   resources :tutors
   #   resources :students
   # end
 
 
   get 'home/index'
+  get 'student/parent'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
