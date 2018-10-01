@@ -15,10 +15,6 @@
   <%= @tutor.price %>
 </p>
 
-<p>
-  <strong>Age:</strong>
-  <%= @tutor.age %>
-</p>
 
 <% time = Time.parse(@tutor.created_at.to_s) %>
 <p class="has-text-gray has-text-centered mb2 f6">Created: <%= time_ago_in_words(time) %> ago </p>

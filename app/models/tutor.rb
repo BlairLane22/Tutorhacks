@@ -6,8 +6,8 @@ class Tutor < ApplicationRecord
   belongs_to :user, optional: true
   # before_create :activate_user
 
-  validates :description, :price, :age, :gender, :subjects, presence: true
-  validates_numericality_of :price, :age
+  validates :description, :price, :gender, :subjects, presence: true
+  validates_numericality_of :price
 
   Gender = ["Male", "Female", "Other"]
   Subjects = ["Math", "Science", "Chemistry", "Physics", "English", "History", "Computer Science", "Art"]
