@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   resources :tutors
   resources :students
+  resources :charges
 
   # resources :users do
   #   resources :tutors
