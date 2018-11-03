@@ -17,6 +17,7 @@ class StudentsController < ApplicationController
   def new
     @student = current_user.build_student
     @under_age = false
+    @current_user = current_user
 
     if @student.user.age < 18
       @under_age = true

@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2018_09_23_195345) do
     t.integer "user_id"
     t.string "avatar"
     t.string "gender"
-    t.text "subjects", default: "--- []\n"
+    t.text "subjects"
   end
 
   create_table "users", force: :cascade do |t|
