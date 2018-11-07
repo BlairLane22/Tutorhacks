@@ -10,7 +10,7 @@ class User < ApplicationRecord
   validates :name, presence: true
 
 
-  Rank = ['Tutor ($19.99)', "Tutor"], ['Student (Free)', "Student"]   # ['Whats shown on screen', "Value saved to database"]
+  Rank = ['Tutor ($14.99)', "Tutor"], ['Student (Free)', "Student"]   # ['Whats shown on screen', "Value saved to database"]
 
   user_age = []
   for i in 1..100

@@ -11,12 +11,66 @@
 
 		<%= render "navbar" %>
 
-		<section class="hero is-link is-fullheight is-bold">
-		  <div class="hero-body">
-		    <div class="container">
-					<div class="title is-1">Pricing</div>
+		<section class="hero is-primary is-fullheight is-bold">
+			<div class="has-text-centered mt6">
+				<div class="title is-1 is-underlined">Plans + Pricing</div>
+			</div>
+
+		  <div class="hero-body" style=" width: 90%; margin-left: 5%; margin-right: 5%;">
+		    <div class="tile is-ancestor">
+		    	<div class="tile is-6">
+		    		<div class="tile is-parent">
+		    			<article class="tile is-child is-white notification has-text-centered">
+								<img src="https://image.flaticon.com/icons/png/512/201/201596.png" alt="" class="" style="width: 128px; height: 128px; margin-top: -6%; margin-bottom: 4%;">
+
+								<div class="subtitle has-text-centered has-text-black" style="margin-bottom: -4%; font-size: 170%;">Student Plan</div>
+								<hr class="hr">
+
+								<div class="content">
+									<div class="has-text-info">
+										<b style="font-size: 165%;">Free</b>/<sub style="font-size: 95%;">Month</sub>
+									</div> <p/>
+									<p><b>Unlimited</b> searches</p>
+									<p><b>Unlimited</b> requests</p>
+									<p><b>Fully</b> custom</p>
+									<p><b>Full Access</b> to website</p>
+									<p></p>
+									<a class="button is-link is-rounded" href="<%= new_user_registration_path %>" style="min-width: 20%; font-size: 115%;">Sign up</a>
+								</div>
+		    			</article>
+		    		</div>
+		    	</div>
+
+					<div class="tile is-6">
+		    		<div class="tile is-parent">
+		    			<article class="tile is-child is-white notification has-text-centered">
+								<img src="http://hannsaa.com/images/teacherslogo.png" alt="" class="" style="width: 128px; height: 128px; margin-top: -6%; margin-bottom: 4%;">
+
+								<div class="subtitle has-text-centered has-text-black" style="margin-bottom: -4%; font-size: 170%;">Tutor Plan</div>
+								<hr class="hr">
+
+								<div class="content">
+									<div class="has-text-info">
+										<b style="font-size: 165%;">$14.99</b>/<sub style="font-size: 95%;">Month</sub>
+									</div> <p/>
+									<p><b>All Students</b> can search your profile</p>
+									<p><b>Unlimited</b> subjects</p>
+									<p><b>Fully</b> custom</p>
+									<p><b>Full Access</b> to website</p>
+									<p></p>
+									<a class="button is-link is-rounded" href="<%= new_user_registration_path %>" style="min-width: 20%; font-size: 115%;">Sign up</a>
+								</div>
+		    			</article>
+		    		</div>
+		    	</div>
 		    </div>
 		  </div>
+		</section>
+
+		<section class="hero-body">
+			<div class="title has-text-centered has-text-black">
+				<b><i>FAQ's</i></b>
+			</div>
 		</section>
 
 
