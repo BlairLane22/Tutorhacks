@@ -5,17 +5,17 @@
         <img src="" alt="Logo">
       </a>
       <span class="navbar-burger burger is-dropdown is-clickable" data-target="navbarMenuHeroA">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span>testing</span>
+        <span>trstr</span>
+        <span>sdfgs</span>
       </span>
     </div>
     <div id="navbarMenuHeroA" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item" href="<%= home_pricing_path %>">
+        <a class="navbar-item <% if @pricing == true %> is-active <% end %>" href="<%= home_pricing_path %>">
           Pricing
         </a>
-        <a class="navbar-item" href="<%= home_about_path %>">
+        <a class="navbar-item <% if @about == true %> is-active <% end %>" href="<%= home_about_path %>">
           About
         </a>
         <a class="navbar-item">
