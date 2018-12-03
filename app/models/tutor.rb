@@ -10,7 +10,7 @@ class Tutor < ApplicationRecord
   validates_numericality_of :price
 
   Gender = ["Male", "Female", "Other"]
-  Subjects = ["Math", "Science", "Chemistry", "Physics", "English", "History", "Computer Science", "Art"]
+  Subjects = ["Math", "Science", "Chemistry", "Physics", "English", "History", "Computer Science", "Art", "Geography"]
 
 
   # def activate_user
