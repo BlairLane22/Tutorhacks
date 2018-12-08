@@ -11,7 +11,7 @@ class Tutor < ApplicationRecord
 
   Gender = ["Male", "Female", "Other"]
   Subjects = ["Math", "Science", "Chemistry", "Physics", "English", "History", "Computer Science", "Art", "Geography"]
-
+  Currency = ["$", "£", "€"]
 
   # def activate_user
   #   [:active] = true

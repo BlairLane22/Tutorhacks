@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    
+
   end
 
   def pricing
@@ -9,5 +9,9 @@ class HomeController < ApplicationController
 
   def about
     @about = true
+  end
+
+  def terms_of_service
+
   end
 end

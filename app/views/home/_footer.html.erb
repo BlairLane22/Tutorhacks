@@ -1,3 +1,41 @@
-<footer class="footer">
-  <p>testing</p>
+<footer class="footer has-background-white-ter">
+  <div class="tile is-ancestor">
+    <div class="tile is-parent is-4">
+      <div class="tile is-child has-text-centered">
+        <ul>
+          <li class="subtitle is-bold has-text-black">Admin</li>
+          <a class="has-text-grey-dark">testing</a><p />
+          <a class="has-text-grey-dark">testing</a><p />
+          <a class="has-text-grey-dark">testing</a>
+        </ul>
+      </div>
+    </div>
+    <div class="tile is-parent is-4">
+      <div class="tile is-child has-text-centered">
+        <ul>
+          <li class="subtitle is-bold has-text-black">Resources</li>
+          <a class="has-text-grey-dark" href="<%= home_pricing_path %>">Pricing</a><p />
+          <a class="has-text-grey-dark" href="<%= home_about_path %>">About</a><p />
+          <a class="has-text-grey-dark">testing</a>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tile is-parent is-4">
+      <div class="tile is-child has-text-centered">
+        <ul>
+          <li class="subtitle is-bold has-text-black">Admin</li>
+          <a href="<%= new_user_registration_path %>" class="has-text-grey-dark">Sign Up<a><p />
+          <a href="<%= new_user_session_path %>" class="has-text-grey-dark">Log in</a>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr class="has-background-black" style="width: 80%; margin-left: 10%; margin-right: 10%;">
+
+  <!-- <a class="navbar-icon" href="<%= root_path %>" style="width: 55px; margin-top: 2.5%; margin-bottom: -5%;">
+    <#%= image_tag("Easel-icon.png") %>
+
+    <a class="#" href="<%= root_path %>" style="margin-top: 6.5%; font-size: 155%; font-family: Comic Sans MS; margin-left: 3%">Tutorhacks</a>
+  </a> -->
 </footer>

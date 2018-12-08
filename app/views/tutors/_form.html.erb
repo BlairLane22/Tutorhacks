@@ -24,20 +24,18 @@
             <p class="control">
               <span class="select">
                 <select>
-                  <option>$</option>
-                  <option>£</option>
-                  <option>€</option>  <!-- Add a currency column to the tutor table -->
+                  <%= f.input_field :gender, collection: Tutor::Currency, prompt: "" %>
                 </select>
               </span>
             </p>
             <div class="control">
               <%= f.input :price, required: true, input_html: { class: "input"}, wrapper: false, label_html: { class:"label" }, placeholder: "Amount of money" %>
             </div>
-            <!-- <p class="control">
+            <p class="control">
               <a class="button">
                 Transfer
               </a>
-            </p> -->
+            </p>
           </div>
 
         </div>
