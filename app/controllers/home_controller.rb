@@ -12,6 +12,9 @@ class HomeController < ApplicationController
   end
 
   def terms_of_service
+  end
 
+  def stats
+    @stats = true
   end
 end

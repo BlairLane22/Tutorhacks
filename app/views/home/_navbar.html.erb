@@ -13,16 +13,17 @@
         <span aria-hidden="true"></span>
       </a>
     </div>
+
     <div id="navbarMenuHeroA" class="navbar-menu">
       <div class="navbar-end">
         <a class="navbar-item <% if @pricing == true %> is-active <% end %>" href="<%= home_pricing_path %>">
           Pricing
         </a>
         <a class="navbar-item <% if @about == true %> is-active <% end %>" href="<%= home_about_path %>">
-          About
+          About Us
         </a>
-        <a class="navbar-item">
-          Documentation
+        <a class="navbar-item <% if @stats == true %> is-active <% end %>" href="<%= home_stats_path %>" style="margin-right: 10%;">
+          Stats
         </a>
 
         <span class="navbar-item">
