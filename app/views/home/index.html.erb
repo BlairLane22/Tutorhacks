@@ -13,9 +13,9 @@
 		<section class="hero is-dark is-fullheight is-bold">
 		  <div class="hero-body" style="margin-bottom: -15%;">
 		    <div class="container">
-					<div class="title is-1">Let us Help you</div>
+					<div class="title is-1 is-capitalized">Let us help you</div>
 					<div class="subtitle mt2" style="width: 45%;">Sometimes completing your homework can be difficult, find someone who can help. Sign up for free today.</div>
-					<a class="button is-link is-rounded" href="<%= new_user_registration_path %>" style="min-width: 20%; font-size: 145%;">Sign up</a>
+					<a class="button is-link is-rounded is-capitalized" href="<%= new_user_registration_path %>" style="min-width: 20%; font-size: 145%;">Sign up</a>
 		    </div>
 		  </div>
 
@@ -66,6 +66,25 @@
 				</div>
 			</div>
 		</section>
+
+		<section class="hero is-medium is-bold" style="background-color: #343477;">
+		  <div class="hero-body">
+		    <div class="container">
+		      <h1 class="title has-text-white ml5">
+						Ready to get started?
+
+						<div class="" style="float: right;">
+							<a class="button is-large is-white is-capitalized" href="<%= new_user_registration_path %>">Create an account</a>
+							<a class="button is-large is-white is-outlined is-capitalized" href="<%= home_about_path %>">More about us</a>
+						</div>
+		      </h1>
+		    </div>
+		  </div>
+		</section>
+
+		<div id="footer2"></div>
+
+
 
 		<%= render "footer" %>
 

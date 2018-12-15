@@ -10,10 +10,33 @@
 
 		<section class="hero-body">
 			<div class="title has-text-centered has-text-black" style="margin-bottom: 3%;">
-				<b><i>Choosing Your Path</i></b>
+				<!-- <b><i>Choosing Your Path</i></b> -->
 			</div>
 
 			<div class="tile is-ancestor">
+				<div class="tile is-parent">
+					<div class="tile ic-child">
+						<div class="title">About Us</div>
+						<div class="subtitle">This is the subtitle.</div>
+					</div>
+				</div>
+				<div class="tile is-parent is-vertical">
+					<div class="tile is-child">
+						<div class="title">Our Mission</div>
+						<div class="subtitle">This is the subtitle.</div>
+					</div>
+					<div class="tile is-child">
+						<div class="title">Title</div>
+						<div class="subtitle">This is the subtitle.</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+			<!-- <div class="tile is-ancestor">
 			  <div class="tile is-parent">
 			  	<div class="tile is-child notification is-dark">
 
@@ -49,7 +72,23 @@
 
 			  	</div>
 			  </div>
-			</div>
+			</div> -->
+		</section>
+
+
+		<section class="hero is-medium is-bold" style="background-color: #343477;">
+		  <div class="hero-body">
+		    <div class="container">
+		      <h1 class="title has-text-white">
+						Ready to get started?
+
+						<div class="" style="float: right;">
+							<a class="button is-large is-white is-capitalized" href="<%=new_user_registration_path %>">Create an account</a>
+							<a class="button is-large is-white is-outlined is-capitalized" href="<%= home_about_path %>">More about us</a>
+						</div>
+		      </h1>
+		    </div>
+		  </div>
 		</section>
 
 
