@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
   def index
-
   end
 
   def pricing
@@ -16,5 +15,7 @@ class HomeController < ApplicationController
 
   def stats
     @stats = true
+    @tutor = Tutor.count
+    @student = Student.count
   end
 end
