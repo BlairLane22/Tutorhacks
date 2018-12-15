@@ -27,7 +27,13 @@ a { color: white; text-decoration: none; }
 
 .home-image {
   margin-left: 60%;
-  margin-bottom: -54px;
+  margin-bottom: -55px;
+}
+
+@media only screen and (min-width: 1500px) {
+  .home-image {
+    margin-bottom: -54px;
+  }
 }
 
 .student-speech-bubble {
