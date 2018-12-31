@@ -19,10 +19,8 @@
 		    	<div class="tile is-6">
 		    		<div class="tile is-parent">
 		    			<article class="tile is-child is-white notification has-text-centered">
-								<img src="https://image.flaticon.com/icons/png/512/201/201596.png" alt="" class="" style="width: 128px; height: 128px; margin-top: -6%; margin-bottom: 4%;">
-								<!-- <div class="" style="width: 128px; height: 128px; margin-top: -7%; margin-bottom: 4%; margin-left: 37%; margin-right: 37%;">
-									<#%= image_tag("pricing/pricing-student-icon.png") %>
-								</div> -->
+
+								<%= image_tag("pricing/pricing-student-icon.png", :style => "width: 128px; height: 128px; margin-top: -6%; margin-bottom: 4%;") %>
 
 								<div class="subtitle has-text-centered has-text-black" style="margin-bottom: -4%; font-size: 170%;">Student Plan</div>
 								<hr class="hr">
@@ -45,10 +43,8 @@
 					<div class="tile is-6">
 		    		<div class="tile is-parent">
 		    			<article class="tile is-child is-white notification has-text-centered">
-								<img src="http://hannsaa.com/images/teacherslogo.png" alt="" class="" style="width: 128px; height: 128px; margin-top: -6%; margin-bottom: 4%;">
-								<!-- <div class="" style="width: 128px; height: 128px; margin-top: -6%; margin-bottom: 4%;">
-									<#%= image_tag("pricing/pricing-tutor-icon.png") %>
-								</div> -->
+
+								<%= image_tag("pricing/pricing-tutor-icon.png", :style => "width: 128px; height: 128px; margin-top: -6%; margin-bottom: 4%;") %>
 
 								<div class="subtitle has-text-centered has-text-black" style="margin-bottom: -4%; font-size: 170%;">Tutor Plan</div>
 								<hr class="hr">
@@ -82,8 +78,8 @@
 
 						<div class="tile is-child is-size-4" style="padding-right: 5%;">
 							<div>
-								<div class="has-text-danger mt5"><b>Q: What comes with the student plan1?</b></div>
-								<div class="has-text-link">A: This is just a test sentencd and will be replaced with something that is better. This is just made to make the sentence longer.</div>
+								<div class="has-text-danger mt5"><b>Q: What comes with the student plan?</b></div>
+								<div class="has-text-link">A: With the student plan you get unlimited searches on tutors in your area, unlimited tutor requests, and profile customization 24/7.</div>
 							</div>
 
 							<div>
@@ -99,13 +95,13 @@
 
 						<div class="tile is-child is-size-4 is-vertical">
 							<div>
-								<div class="has-text-danger mt5"><b>Q: What comes with the student plan2?</b></div>
-								<div class="has-text-link">A: This is just a test sentencd and will be replaced with something that is better. This is just made to make the sentence longer.</div>
+								<div class="has-text-danger mt5"><b>Q: What comes with the tutor plan?</b></div>
+								<div class="has-text-link">A: With the tutor plan you get access to select as many subjects as you want, and profile customization 24/7.</div>
 							</div>
 
 							<div>
-								<div class="has-text-danger mt5"><b>Q: What comes with the student plan2?</b></div>
-								<div class="has-text-link">A: This is just a test sentencd and will be replaced with something that is better. This is just made to make the sentence longer.</div>
+								<div class="has-text-danger mt5"><b>Q: Can you pay with Paypal?</b></div>
+								<div class="has-text-link">A: Currently you are only allowed to pay with debit or credit card and not with Paypal. But adding paypal to the payment choices is on the top of out list.</div>
 							</div>
 
 							<div>
@@ -124,7 +120,7 @@
 		  <div class="hero-body">
 		    <div class="container">
 		      <h1 class="title has-text-white">
-						Ready to get started?
+						Are you ready to get started?
 
 						<div class="" style="float: right;">
 							<a class="button is-large is-white is-capitalized" href="<%=new_user_registration_path %>">Create an account</a>

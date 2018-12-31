@@ -27,7 +27,7 @@ a { color: white; text-decoration: none; }
 
 .home-image {
   margin-left: 60%;
-  margin-bottom: -55px;
+  margin-bottom: -54px;
 }
 
 @media only screen and (min-width: 1500px) {
@@ -61,8 +61,23 @@ a { color: white; text-decoration: none; }
 
 // Start of pricing.html.erb
 
-
-
-
+.pricing-tutor-icon {
+  width: 128px;
+  height: 128px;
+  margin-top: -6%;
+  margin-bottom: 4%;
+}
 
 // End of pricing.html.erb
+
+
+
+// Start of the about.html.erb
+
+.about-tutor-count {
+  border-top-style: groove;
+  border-width: 2px;
+}
+
+
+// End of the about.html.erb

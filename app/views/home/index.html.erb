@@ -13,7 +13,7 @@
 		<section class="hero is-dark is-fullheight is-bold">
 		  <div class="hero-body" style="margin-bottom: -15%;">
 		    <div class="container">
-					<div class="title is-1 is-capitalized">Let us help you</div>
+					<div class="title is-capitalized" style="font-size: 400%;">Let us help you</div>
 					<div class="subtitle mt2" style="width: 45%;">Sometimes completing your homework can be difficult, find someone who can help. Sign up for free today.</div>
 					<a class="button is-link is-rounded is-capitalized" href="<%= new_user_registration_path %>" style="min-width: 20%; font-size: 145%;">Sign up</a>
 		    </div>
@@ -36,42 +36,52 @@
 		</section>
 
 		<section class="hero-body mb4">
-			<div class="title has-text-centered has-text-black" style="margin-bottom: 5%;">
-				<b><i>Why Tutorhacks?</i></b>
+			<div class="title has-text-centered has-text-black" style="margin-bottom: 5%; font-family: arial black;">
+				<b>Why Tutorhacks?</b>
 			</div>
 
 			<div class="tile is-ancestor is-vertical">
 				<div class="tile is-parent notifaction has-text-white">
-					<div class="tile is-child notifaction has-background-info notification is-7" style="height: 350px;">
-						<p class="title">Quick</p>
-          	<p class="subtitle">Top tile</p>
+					<div class="tile is-child notifaction has-background-info notification is-7" style="height: 325px;">
+						<p class="title pt2">Quick</p>
+          	<p class="subtitle pt3">The speed of making an account is very important to us. Make a fully customizable profile in under 5 minutes. Once done, you are free to explor the tutors in your neighborhood with complete freedom.</p>
+
+						<%= image_tag("home/fast-clock-icon.png", alt: "Quick", class: "mr5", style: "width: 150px; height: 125px; float: right;") %>
 					</div>
+
 					<div class="tile is-child"></div>
 				</div>
 
 				<div class="tile is-parent notifaction has-text-white">
 					<div class="tile is-child"></div>
-					<div class="tile is-child notifaction has-background-info notification is-7" style="height: 350px;">
-						<p class="title">Effective</p>
-          	<p class="subtitle">It really is effective and easy to use. Our simple user interface makes it easy to navigate</p>
+
+					<div class="tile is-child notifaction has-background-info notification is-7" style="height: 325px;">
+						<p class="title pt2">Effective</p>
+          	<p class="subtitle pt3">It really is effective and easy to use. Our simple user interface makes it easy to navigate and help is on every corner. If you still can't figure it out, visite the help center and maybe your question can be answered.</p>
+
+						<%= image_tag("home/deploma-icon.png", alt: "Effective", class: "mr5", style: "width: 125px; height: 125px; float: right;") %>
 					</div>
 				</div>
 
 				<div class="tile is-parent notifaction has-text-white">
-					<div class="tile is-child notifaction has-background-info notification is-7" style="height: 350px;">
-						<p class="title">Safe</p>
-          	<p class="subtitle">Safety is our number one priority. Our safety measures include if you are a student and you are under the age of 18 you have to supply a secondary email, who are notifiedof everything you are doing.</p>
+					<div class="tile is-child notifaction has-background-info notification is-7" style="height: 325px;">
+						<p class="title pt2">Safe</p>
+          	<p class="subtitle pt3">Safety is our number one priority. Our safety measures include if you are a student and you are under the age of 18 you have to supply a secondary email, who are notifiedof everything you are doing.</p>
+
+						<%= image_tag("home/key-icon.png", alt: "Safe", class: "mr5", style: "width: 125px; height: 125px; float: right;") %>
 					</div>
+
 					<div class="tile is-child"></div>
 				</div>
 			</div>
 		</section>
 
+
 		<section class="hero is-medium is-bold" style="background-color: #343477;">
 		  <div class="hero-body">
 		    <div class="container">
 		      <h1 class="title has-text-white ml5">
-						Ready to get started?
+						Are you ready to get started?
 
 						<div class="" style="float: right;">
 							<a class="button is-large is-white is-capitalized" href="<%= new_user_registration_path %>">Create an account</a>

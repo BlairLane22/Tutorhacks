@@ -8,83 +8,50 @@
 		  </div>
 		</section>
 
-		<section class="hero-body">
+		<section class="hero-body"> <!-- Add "mb5" to class when tutor count is uncommented -->
 			<div class="title has-text-centered has-text-black" style="margin-bottom: 3%;">
 				<!-- <b><i>Choosing Your Path</i></b> -->
 			</div>
 
-			<div class="tile is-ancestor">
-				<div class="tile is-parent">
-					<div class="tile ic-child">
+			<div class="tile is-ancestor" style="margin-bottom: 5%;">
+				<div class="tile is-parent" style="padding-left: 5%; margin-right: -3%;">
+					<div class="tile is-child">
 						<div class="title">About Us</div>
-						<div class="subtitle">This is the subtitle.</div>
+						<div class="subtitle pr4 pt2">This is the subtitle.</div>
 					</div>
 				</div>
 				<div class="tile is-parent is-vertical">
 					<div class="tile is-child">
 						<div class="title">Our Mission</div>
-						<div class="subtitle">This is the subtitle.</div>
+						<div class="subtitle pr5 pt2">Our mission is to make it easier for students to complete their homework. With Tutorhacks we think that we've done just that. Our platform for allows students to search for tutors that have also signed up. Everything is built to be very easy to use, even a kid could navigate our website.</div>
 					</div>
-					<div class="tile is-child">
-						<div class="title">Title</div>
-						<div class="subtitle">This is the subtitle.</div>
+					<div class="tile is-child pt3">
+						<div class="title">Safety</div>
+						<div class="subtitle pr5 pt2">Safety is our number one priority. Our safety measures include if you are a student and you are under the age of 18 you have to supply a secondary email, who are notifiedof everything you are doing.</div>
 					</div>
 				</div>
 			</div>
-
-
-
-
-
-			<!-- <div class="tile is-ancestor">
-			  <div class="tile is-parent">
-			  	<div class="tile is-child notification is-dark">
-
-						<div class="has-text-centered title">Tutor</div>
-						<hr class="" style="margin-top: -3%; margin-left: 5%; margin-right: 5%;">
-
-						<ul class="is-size-5">
-							<li class="pt4">- Firstly you must create an <a href="<%= new_user_registration_path %>" class="#">account</a>.</li>
-							<li class="pt4">- When you do, make sure that the plan you select is the tutor plan.</li>
-							<li class="pt4">- When you have filled out the firm correctly. Hit sign up and it'll take you to the next stage.</li>
-							<li class="pt4">- It'll now take you to a billing page for the subscription</li>
-							<li class="pt4">- After that you now need to creating your fully customizable profile</li>
-							<li class="pt4">- After filling out the form click create. Then it'll show you what your profile looks like to other users.</li>
-							<li class="pt4">- Press continue and now all student users and search your name.</li>
-						</ul>
-
-			  	</div>
-			  </div>
-			  <div class="tile is-parent">
-			  	<div class="tile is-child notification is-warning">
-
-						<div class="has-text-centered title">Student</div>
-						<hr class="" style="background-color: black; margin-top: -3%; margin-left: 5%; margin-right: 5%;">
-
-						<ul class="is-size-5">
-							<li class="pt4">- Firstly you must create an <a href="<%= new_user_registration_path %>" class="#">account</a>.</li>
-							<li class="pt4">- When you do, make sure that the plan you select is the student plan.</li>
-							<li class="pt4">- When you have filled out the firm correctly. Hit sign up and it'll take you to the next stage.</li>
-							<li class="pt4">- Now to the fun part, creating your profile. If you are under 18 years of age you will need to have a secondary email address, preferable and gaurdian or parent.</li>
-							<li class="pt4">- After filling out the form click create. Then it'll show you what your profile looks like to other users.</li>
-							<li class="pt4">- Press continue and your now free to start browsing for a tutor.</li>
-						</ul>
-
-			  	</div>
-			  </div>
-			</div> -->
 		</section>
 
+		<!-- <section class="hero is-medium mb3 about-tutor-count" style="margin-top: -5%;">
+			<div class="hero-body has-text-centered">
+				<div class="title is-size-2">Tutor Count</div>
+				<div class="subtitle pt3" style="font-size: 175%;">
+					<#%= Tutor.count %>
+				</div>
+				<!-- <div class="subtitle is-size-4 mt5">Find one in your area</div> -->
+			<!-- </div>
+		</section> -->
 
 		<section class="hero is-medium is-bold" style="background-color: #343477;">
 		  <div class="hero-body">
 		    <div class="container">
 		      <h1 class="title has-text-white">
-						Ready to get started?
+						Are you ready to get started?
 
 						<div class="" style="float: right;">
 							<a class="button is-large is-white is-capitalized" href="<%=new_user_registration_path %>">Create an account</a>
-							<a class="button is-large is-white is-outlined is-capitalized" href="<%= home_about_path %>">More about us</a>
+							<!-- <a class="button is-large is-white is-outlined is-capitalized" href="<#%= home_about_path %>">More about us</a> -->
 						</div>
 		      </h1>
 		    </div>

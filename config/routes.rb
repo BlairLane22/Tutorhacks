@@ -32,5 +32,6 @@ Rails.application.routes.draw do
   get 'student/parent'
   get 'home/terms_of_service'
   get 'home/stats'
+  get 'home/help_service'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
