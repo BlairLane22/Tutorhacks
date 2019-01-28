@@ -7,16 +7,9 @@ class User < ApplicationRecord
   has_one :tutor, dependent: :destroy
   has_one :student, dependent: :destroy
 
-  validates :name, presence: true
+  validates :name, :email, :password, :password_confirmation, :plan, :age, presence: true
 
 
-  Rank = ['Tutor ($14.99/month)', "Tutor"], ['Student (Free/month)', "Student"]   # ['Whats shown on screen', "Value saved to database"]
-
-  user_age = []
-  for i in 1..100
-    user_age << i
-  end
-
-  Age = user_age
+  Plan = ['Tutor ($14.99/month)', "Tutor"], ['Student (Free/month)', "Student"]   # ['Whats shown on screen', "Value saved to database"]
 
 end

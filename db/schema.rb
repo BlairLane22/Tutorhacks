@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_08_005332) do
+ActiveRecord::Schema.define(version: 2019_01_27_211120) do
 
   create_table "punches", force: :cascade do |t|
     t.integer "punchable_id", null: false
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2018_12_08_005332) do
     t.string "gender"
     t.text "subjects"
     t.string "currency"
+    t.string "phone_number"
   end
 
   create_table "users", force: :cascade do |t|
@@ -57,7 +58,7 @@ ActiveRecord::Schema.define(version: 2018_12_08_005332) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "rank"
+    t.string "plan"
     t.string "name"
     t.boolean "active", default: false
     t.integer "age"

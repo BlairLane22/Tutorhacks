@@ -48,7 +48,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
   gem 'rspec-rails', '~> 3.7'
-  gem 'factory_bot'
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
   gem 'shoulda-matchers', '~> 3.1'
   gem 'better_errors', '~> 2.4'
   gem 'guard', '~> 2.14', '>= 2.14.2'

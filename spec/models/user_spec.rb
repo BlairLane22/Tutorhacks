@@ -6,12 +6,10 @@ RSpec.describe User, type: :model do
     it { should have_one(:student)}
 
     it { should validate_presence_of(:name)}
-  end
-
-  describe "Rank array" do
-    it "should contain Tutor and student" do
-      Rank = ['Tutor', 'Student']
-      expect(Rank).to contain_exactly('Tutor', 'Student')
-    end
+    it { should validate_presence_of(:email)}
+    it { should validate_presence_of(:password)}
+    it { should validate_presence_of(:password_confirmation)}
+    it { should validate_presence_of(:plan)}
+    it { should validate_presence_of(:age)}
   end
 end
