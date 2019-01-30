@@ -5,9 +5,12 @@ RSpec.describe Tutor, type: :model do
     tutor = FactoryBot.build(:tutor)
   # end
 
-  describe "Validations" do
-    it { should belong_to(:user) }
+  describe "associations" do
+    it { should belong_to(:user)}
+  end
 
+
+  describe "Validations" do
     it { should validate_presence_of(:description)}
     it { should validate_presence_of(:price)}
 

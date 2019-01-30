@@ -3,10 +3,11 @@ require 'rails_helper'
 RSpec.describe "tutors/edit", type: :view do
   before(:each) do
     @tutor = assign(:tutor, Tutor.create!(
-      :name => "MyString",
       :description => "MyText",
       :price => "9.99",
-      :age => 1
+      :gender => "female",
+      :subjects => ["Math", "Chemistry"],
+      :phone_number => "6138433465"
     ))
   end
 
@@ -15,13 +16,9 @@ RSpec.describe "tutors/edit", type: :view do
 
     assert_select "form[action=?][method=?]", tutor_path(@tutor), "post" do
 
-      assert_select "input[name=?]", "tutor[name]"
-
       assert_select "textarea[name=?]", "tutor[description]"
 
       assert_select "input[name=?]", "tutor[price]"
-
-      assert_select "input[name=?]", "tutor[age]"
     end
   end
 end

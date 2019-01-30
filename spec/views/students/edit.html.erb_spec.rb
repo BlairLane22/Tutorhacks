@@ -3,10 +3,11 @@ require 'rails_helper'
 RSpec.describe "students/edit", type: :view do
   before(:each) do
     @student = assign(:student, Student.create!(
-      :name => "MyString",
       :description => "MyText",
-      :age => 1
+      :grade => 12
     ))
+
+    @under_age = true
   end
 
   it "renders the edit student form" do
@@ -14,11 +15,8 @@ RSpec.describe "students/edit", type: :view do
 
     assert_select "form[action=?][method=?]", student_path(@student), "post" do
 
-      assert_select "input[name=?]", "student[name]"
-
       assert_select "textarea[name=?]", "student[description]"
-
-      assert_select "input[name=?]", "student[age]"
+      assert_select "input[name=?]", "student[parent_email]"
     end
   end
 end

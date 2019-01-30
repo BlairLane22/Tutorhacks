@@ -3,9 +3,8 @@ require 'rails_helper'
 RSpec.describe "students/new", type: :view do
   before(:each) do
     assign(:student, Student.new(
-      :name => "MyString",
       :description => "MyText",
-      :age => 1
+      :grade => 12
     ))
   end
 
@@ -13,12 +12,7 @@ RSpec.describe "students/new", type: :view do
     render
 
     assert_select "form[action=?][method=?]", students_path, "post" do
-
-      assert_select "input[name=?]", "student[name]"
-
       assert_select "textarea[name=?]", "student[description]"
-
-      assert_select "input[name=?]", "student[age]"
     end
   end
 end

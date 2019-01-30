@@ -12,10 +12,4 @@ class HomeController < ApplicationController
 
   def terms_of_service
   end
-
-  def stats
-    @stats = true
-    @tutor = Tutor.count
-    @student = Student.count
-  end
 end
