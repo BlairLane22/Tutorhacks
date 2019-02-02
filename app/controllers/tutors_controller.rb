@@ -11,7 +11,7 @@ class TutorsController < ApplicationController
   # GET /tutors/1
   # GET /tutors/1.json
   def show
-    if current_user.id != @tutor.user_id || current_user.rank == "Student"
+    if current_user.id != @tutor.user_id || current_user.plan == "Student"
       @tutor.punch(request)
     end
   end

@@ -1,27 +1,28 @@
-<h1>Students</h1>
+<%= render 'navbar' %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<body>
+  <div style="margin-top: 8%; font-size: 135%; margin-left: 5%; margin-bottom: -0.75%;">
+    <%= name %>
+  </div>
+  <hr class="" style="width: 90%; margin-left: 5%; margin-right: 5%;"/>
 
-  <tbody>
-    <tr>
-    <% @student.each do |student| %>
-      <% if current_user.id == student.user_id %>
-        <td><%= student.user.name %></td>
-        <td><%= student.description %></td>
-        <td><%= link_to 'Show', student %></td>
-        <td><%= link_to 'Edit', edit_student_path(student) %></td>
-        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <% end %>
-    <% end %>
-    </tr>
-  </tbody>
-</table>
 
-<br>
+  <div class="hero" style="height: 50%; margin-top: 7%;">
+    <section class=" hero-body tile is-ancestor">
+      <div class="tile is-parent" style="height: 100%; width: 100%;">
+        <article class="tile is-child has-background-grey notification">
+          <p>HELLO 1</p>
+        </article>
+
+        <article class="tile is-child has-background-warning notification">
+          <p>HELLO 2</p>
+        </article>
+
+        <article class="tile is-child has-background-info notification">
+          <p>HELLO 3</p>
+        </article>
+      </div>
+    </section>
+  </div>
+
+</body>

@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  authenticated :user, lambda {|u| u.rank == "Student"} do
+  authenticated :user, lambda {|u| u.plan == "Student"} do
     root to: "students#index"
   end
 
-  authenticated :user, lambda {|u| u.rank == "Tutor"} do
+  authenticated :user, lambda {|u| u.plan == "Tutor"} do
     root to: "tutors#index"
   end
 

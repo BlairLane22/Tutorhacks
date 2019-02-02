@@ -1,7 +1,7 @@
 class RegistrationsController < Devise::RegistrationsController
 
   def after_sign_in_path_for(resource)
-    if resource.rank == 'Tutor'
+    if resource.plan == 'Tutor'
       new_charge_path(resource.id)
     else
       new_student_path(resource.id)
@@ -11,7 +11,7 @@ class RegistrationsController < Devise::RegistrationsController
   private
 
   def sign_up_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :rank, :age)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :plan, :age)
   end
 
   def account_update_params

@@ -12,4 +12,9 @@ class User < ApplicationRecord
 
   Plan = ['Tutor ($14.99/month)', "Tutor"], ['Student (Free/month)', "Student"]   # ['Whats shown on screen', "Value saved to database"]
 
+  Age = []
+	for i in 1..100
+	  Age << i
+	end
+
 end

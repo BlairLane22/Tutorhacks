@@ -1,0 +1,37 @@
+<nav class="navbar is-fixed-top is-transparent" style="background-color: #E0E0E0; margin-bottom: 10%; height: 65px;">
+  <div class="container">
+
+    <div class="navbar-menu" style="">
+      <a href="<%= root_path %>" class="navbar-start is-size-3 has-text-black">
+        <%= image_tag("Easel-icon.png", style: "height: 45px; width: 45px; margin-top: 5%;") %>
+        <div style="margin-top: 3%; margin-left: 5%;">Tutorhacks</div>
+      </a>
+
+      <div class="navbar-end is-size-5 has-text-black dropdown">
+        <div class="dropdown is-hoverable">
+          <div class="dropdown-trigger">
+            <div class="" aria-haspopup="true" aria-controls="dropdown-menu4" style="margin-top: 8%;">
+              <span><%= current_user.email %></span>
+              <span class="icon is-medium">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+            <div class="dropdown-content">
+              <div class="dropdown-item is-size-6">
+                <%# if @singed_in %>
+                  <%#= link_to "Show profile", student_path, style: "margin-top: 5%;", class: "has-text-black" %><p />
+                  <%#= link_to "Edit profile", edit_student_path(@student), style: "margin-top: 5%;", class: "has-text-black" %><p />
+                <%# end %>
+
+                <%= link_to "Account detail", edit_user_registration_path(@user), style: "margin-top: 5%;", class: "has-text-black" %><p />
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, style: "margin-top: 5%;", class: "has-text-black" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

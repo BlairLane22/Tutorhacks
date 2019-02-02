@@ -15,4 +15,10 @@ RSpec.describe Student, type: :model do
     it { should validate_presence_of(:grade)}
   end
 
+  describe "Creating a student" do
+    it "change " do
+
+    end
+  end
+
 end

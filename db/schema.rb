@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_27_211120) do
+ActiveRecord::Schema.define(version: 2019_01_30_233328) do
 
   create_table "punches", force: :cascade do |t|
     t.integer "punchable_id", null: false
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2019_01_27_211120) do
     t.integer "user_id"
     t.integer "grade"
     t.string "parent_email", default: ""
+    t.string "gender"
   end
 
   create_table "tutors", force: :cascade do |t|
